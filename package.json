@@ -1,13 +1,14 @@
 {
   "name": "@adrianbrs/vue3-highcharts",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "./dist/vue3-highcharts.umd.js",
   "private": false,
   "types": "@types",
   "scripts": {
     "test": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint --fix",
-    "build": "vue-cli-service build --target lib --name vue3-highcharts --formats umd --entry src/index.ts",
+    "build:lib": "vue-cli-service build --target lib --name vue3-highcharts --formats umd --entry src/index.ts",
+    "build": "yarn build:lib && tsc --emitDeclarationOnly",
     "build:publish": "npm run test && npm run build && npm publish"
   },
   "author": "Adrian Cerbaro",
