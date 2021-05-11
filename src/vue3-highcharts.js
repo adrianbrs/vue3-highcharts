@@ -33,6 +33,8 @@ const vueHighcharts = defineComponent({
   },
 
   setup(props, { emit }) {
+    const isBrowser = typeof window !== 'undefined' && typeof window.document !== 'undefined';
+
     const chartRef = ref(null);
     const chart = ref(null);
 
@@ -58,7 +60,9 @@ const vueHighcharts = defineComponent({
       });
     } else if (!props.options) {
       console.warn('The "options" parameter is required.');
-    } else {
+    
+    // Check if is running in browser context and throw warning
+    } else if(isBrowser) {
       console.warn(`${props.type} is not a valid highcharts type or has not been imported`);
     }
 
