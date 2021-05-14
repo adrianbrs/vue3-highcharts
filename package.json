@@ -1,6 +1,6 @@
 {
   "name": "@adrianbrs/vue3-highcharts",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "main": "./dist/vue3-highcharts.umd.js",
   "private": false,
   "types": "@types",
