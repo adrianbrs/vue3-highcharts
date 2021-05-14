@@ -10,6 +10,7 @@ declare const _default: {
         redrawOnUpdate: boolean;
         oneToOneUpdate: boolean;
         animateOnUpdate: boolean;
+        deepCopyOnUpdate: boolean;
     } & {}>, ctx: import("vue").SetupContext<Record<string, any>>) => void | import("vue").RenderFunction | {
         chartRef: import("vue").Ref<null>;
         chart: import("vue").Ref<null>;
@@ -32,6 +33,7 @@ declare const _default: {
         redrawOnUpdate: boolean;
         oneToOneUpdate: boolean;
         animateOnUpdate: boolean;
+        deepCopyOnUpdate: boolean;
     } | undefined;
     data?: ((this: import("vue").ComponentPublicInstance<Readonly<{
         type: string;
@@ -39,36 +41,42 @@ declare const _default: {
         redrawOnUpdate: boolean;
         oneToOneUpdate: boolean;
         animateOnUpdate: boolean;
+        deepCopyOnUpdate: boolean;
     } & {}>, {}, {}, {}, import("vue").MethodOptions, {}, Readonly<{
         type: string;
         options: Record<string, any>;
         redrawOnUpdate: boolean;
         oneToOneUpdate: boolean;
         animateOnUpdate: boolean;
+        deepCopyOnUpdate: boolean;
     } & {}>, {}, false, import("vue").ComponentOptionsBase<Readonly<{
         type: string;
         options: Record<string, any>;
         redrawOnUpdate: boolean;
         oneToOneUpdate: boolean;
         animateOnUpdate: boolean;
+        deepCopyOnUpdate: boolean;
     } & {}>, {}, {}, {}, import("vue").MethodOptions, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}>>, vm: import("vue").ComponentPublicInstance<Readonly<{
         type: string;
         options: Record<string, any>;
         redrawOnUpdate: boolean;
         oneToOneUpdate: boolean;
         animateOnUpdate: boolean;
+        deepCopyOnUpdate: boolean;
     } & {}>, {}, {}, {}, import("vue").MethodOptions, {}, Readonly<{
         type: string;
         options: Record<string, any>;
         redrawOnUpdate: boolean;
         oneToOneUpdate: boolean;
         animateOnUpdate: boolean;
+        deepCopyOnUpdate: boolean;
     } & {}>, {}, false, import("vue").ComponentOptionsBase<Readonly<{
         type: string;
         options: Record<string, any>;
         redrawOnUpdate: boolean;
         oneToOneUpdate: boolean;
         animateOnUpdate: boolean;
+        deepCopyOnUpdate: boolean;
     } & {}>, {}, {}, {}, import("vue").MethodOptions, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, {}>>) => unknown) | undefined;
     computed?: {} | undefined;
     methods?: {} | undefined;

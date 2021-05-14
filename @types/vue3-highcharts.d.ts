@@ -20,6 +20,10 @@ declare const vueHighcharts: import("vue").DefineComponent<{
         type: BooleanConstructor;
         default: boolean;
     };
+    deepCopyOnUpdate: {
+        type: BooleanConstructor;
+        default: boolean;
+    };
 }, {
     chartRef: Ref<null>;
     chart: Ref<null>;
@@ -29,10 +33,12 @@ declare const vueHighcharts: import("vue").DefineComponent<{
     redrawOnUpdate: boolean;
     oneToOneUpdate: boolean;
     animateOnUpdate: boolean;
+    deepCopyOnUpdate: boolean;
 } & {}>, {
     type: string;
     redrawOnUpdate: boolean;
     oneToOneUpdate: boolean;
     animateOnUpdate: boolean;
+    deepCopyOnUpdate: boolean;
 }>;
 export default vueHighcharts;

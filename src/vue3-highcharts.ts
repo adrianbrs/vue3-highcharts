@@ -2,6 +2,7 @@
 /* eslint-disable prefer-rest-params */
 import { defineComponent, h, ref, onMounted, onUnmounted, watch, toRefs, Ref } from "vue";
 import Highcharts from "highcharts";
+import { copyObject } from './utils'
 
 const vueHighcharts = defineComponent({
   name: "VueHighchart",
@@ -23,10 +24,15 @@ const vueHighcharts = defineComponent({
 
     oneToOneUpdate: {
       type: Boolean,
-      default: false
+      default: true
     },
 
     animateOnUpdate: {
+      type: Boolean,
+      default: true
+    },
+
+    deepCopyOnUpdate: {
       type: Boolean,
       default: true
     }
@@ -46,7 +52,7 @@ const vueHighcharts = defineComponent({
         newValue => {
           if (chart.value) {
             (chart.value as any).update(
-              newValue,
+              copyObject(newValue, props.deepCopyOnUpdate),
               props.redrawOnUpdate,
               props.oneToOneUpdate,
               props.animateOnUpdate
@@ -58,7 +64,8 @@ const vueHighcharts = defineComponent({
       );
 
       onMounted(() => {
-        chart.value = (Highcharts as any)[props.type](chartRef.value, options.value, () => {
+        const opts = copyObject(options.value, true); // Always use a deep copy to generate a chart
+        chart.value = (Highcharts as any)[props.type](chartRef.value, opts, () => {
           emit("rendered");
         });
       });
